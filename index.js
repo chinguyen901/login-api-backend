@@ -23,7 +23,7 @@ app.post('/login', async (req, res) => {
       [email, password]
     );
     if (result.rows.length > 0) {
-      res.json({ success: true, name: result.rows[0].name });
+      res.json({ success: true, username: result.rows[3].username });
     } else {
       res.json({ success: false, message: 'Invalid email or password' });
     }
